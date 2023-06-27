@@ -54,27 +54,85 @@
   
            
         </nav>
-
-            <h2>Inno3D desarrollo un sistema de ocultación para los cables de alimentación en las tarjetas graficas</h2>
-        
+          <div class="card">
+            <h2>Cómo calcular la vida útil de un SSD antes de comprarlo</h2>
+          </div>
             <!-- Noticia -->
             <div class="card">
-              <img src="https://www.hd-tecnologia.com/imagenes/articulos/2023/06/Inno3D-desarrollo-un-sistema-de-ocultacion-para-los-cables-en-las-tarjetas-graficas-2-800x500.jpg" class="card-img-top" alt="Imagen 1">
+              <img src="https://hardzone.es/app/uploads-hardzone.es/2023/06/vida-util-real-ssd.jpg" class="card-img-top" alt="Imagen 1">
               <div class="card-body">
-                <h5 class="card-title">Título de la Noticia</h5>
-                <p class="card-text">Inno3D ha desarrollado un nuevo sistema para ocultar los cables de sus tarjetas gráficas, logrando un aspecto mucho mas ordenado en el gabinete. Las GPU GeForce RTX 4070 AX eSports y GeForce RTX 4060-Ti iChill X2 White llegaran con su conector ubicado en el medio de la tarjeta, pero apuntando hacia la placa madre, no al frente como nos tienen acostumbrado, una característica que seguramente será bien recibida por aquellos que buscan tener todo bien ordenado dentro de la PC.
+                <p class="card-text">Cuando vamos a comprar un SSD, nos solemos fijar en el formato, capacidad y el precio. Luego, es habitual fijarse en otros parámetros como la velocidad de lectura y escritura. Dentro de todos los parámetros que se suelen dar están los TBW, que establece cuando la unidad empezará a sufrir problemas, pero, no es la vida útil real del SSD. </p>
+                <p class="card-text">Lo primero que debemos saber del parámetro TBW o terabytes escritos, es que, en un parámetro de garantía, no de durabilidad. El fabricante lo que nos dice que, a partir de este valor, la unidad puede tener problemas. Dichos problemas van desde perdida de rendimiento hasta perdida de datos, entre otros.
 
-                    La empresa ha situado el conector de 8 pines al revés, mirando hacia la placa madre, o sea el conector de alimentación esta orientado ahora a 180 grados. Adicionalmente, solo se requerirá conectar un solo cable, lo que evita el enredo de estos mismos. Estas tarjetas graficas no traen el conector 12VHPWR.  
-                    En el caso de las dos GPU de Inno3D, es evidente que esto ha sido posible gracias al conector de 8 pines. Sin embargo, no hay ningún impedimento para que este diseño sea perfeccionado y se haga disponible también para los conectores 12VHPWR en el futuro. </p>
+                  No es un parámetro que nos diga cuanto tiempo nos durara la unidad, sino, cuando empezara a tener fallos. El parámetro de vida útil real del SSD no se da por parte de los fabricantes, así que lo tenemos que calcular. Precisamente, eso es lo que haremos, explicarte como calcularlo debidamente.</p>
               </div>
-              <img src="https://www.hd-tecnologia.com/imagenes/articulos/2023/06/Inno3D-desarrollo-un-sistema-de-ocultacion-para-los-cables-en-las-tarjetas-graficas-5-800x450.jpg" class="card-img-top" alt="Imagen 2">
               <div class="card-body">
-                <h5 class="card-title">El diseño de Inno3D cambia según el modelo</h5>
-                <p class="card-text">Vale la pena señalar que, aunque la GeForce RTX 4070 AX eSports y GeForce RTX 4060-Ti iChill X2 White siguen la misma idea, Inno3D las aplica de manera diferente. En la RTX 4070 tiene una bisagra en la mitad del backplate, lo que permite al usuario abrir e insertar el cable de 8 pines y luego volver a cerrarlo. En la RTX 4060-Ti, por otro lado, debido a su tamaño considerablemente más pequeña, solo tiene un espacio más grande para que se coloque, con una extensión del plástico que evita que se aleje demasiado del backplate.</p>
+                <h5 class="card-title h1">Parámetros básicos que debemos conocer</h5>
+                <p class="card-text">Hay un conjunto de datos que necesitamos saber para poder calcular la vida útil real de un SSD. Algunos son más fáciles de obtener y otros, un poco más complejos. Estos parámetros son:</p>
+                <ul>
+                  <li class="">Tecnología de las memorias NAND Flash que usa el SSD [suele encontrarse en la web del fabricante]</li>
+                  <li>Capacidad de nuestra unidad de almacenamiento</li>
+                  <li>Aplicaciones a las que va destinado [no es lo mismo un SSD domestico o gaming, que un SSD para NAS o para Data Center]</li>
+                  <li>Resistencia y ciclo P/E del tipo de memorias NAND Flash [depende el tipo de memoria]</li>
+                  <li>Factor de sobreaprovisionamiento o su porcentaje [difícil de encontrar, esta normalmente en el folleto informativo de la web del fabricante]</li>
+                  <li>Velocidad de escritura [fácil de encontrar, suele estar en la página de venta del SSD y siempre estará en la web del fabricante]</li>
+                  <li>Ciclo de trabajo y uso [dicho de otro modo, si lo vamos a usar para jugar, trabajar o almacenamiento, siendo un valor estimado normalmente]</li>
+                  <li>Porcentaje de escritura durante el uso de la unidad [valor estimado que depende del ciclo de trabajo y uso]</li>
+                  <li>WAF o factor de amplificación de escritura de la controladora [se calcula según el uso]</li>
+              </ul>
               </div>
-              <img src="https://www.hd-tecnologia.com/imagenes/articulos/2023/06/Inno3D-desarrollo-un-sistema-de-ocultacion-para-los-cables-en-las-tarjetas-graficas-6-800x450.jpg" class="card-img-top" alt="Imagen 3">
+              <img src="https://hardzone.es/app/uploads-hardzone.es/2023/06/ssd-m.2-corsair.jpg" class="card-img-top" alt="Imagen 3">
               <div class="card-body">
-                <p class="card-text">Ambos productos vendrán con cables ya incluidos para que el usuario solo tenga que conectarlos a la fuente de alimentación. Todavía no hay un pronóstico sobre la disponibilidad de ambas tarjetas de video, así como un precio sugerido para su venta.</p>
+                <h5 class="card-title">Ciclo P/E de las memorias NAND Flash</h5>
+                <p class="card-text">Los SSD utilizan chips de memoria para su capacidad de almacenamiento. Internamente, podríamos decir que se dividen en pequeños compartimentos que puede albergar una cantidad determinada de datos. Concretamente, almacenan una determinada cantidad de bits por celda.
+
+                  Estos bits se puede reestablecer una determinada cantidad de veces, denominándose este proceso «Ciclo P/E». Dicho valor depende de la cantidad de bits por cada celda. Los parámetros estándar son los siguientes:</p>
+                <ul>
+                  <li class="">SLC (1 bit/celda): 100.000 P/E</li>
+                  <li>MLC (2 bits/celda): 30.000 P/E</li>
+                  <li>TLC (3 bits/celda): 3.000 P/E</li>
+                  <li>QLC (4 bits/celda): 1.000 P/E</li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Write Amplification Factor o WAF</h5>
+                <p class="card-text">Determina la cantidad de información REAL que se escribe físicamente en un SSD. Tranquilo, esto es más una expresión técnica que otra cosa, es una definición.
+
+                  Este valor es un múltiplo de la cantidad lógica que se quiere escribir. Normalmente, este dato no se suele dar y se puede calcular dividiendo el ratio total de escrituras con el ratio total de escrituras lógicas y sumando 1 al resultado.
+                  
+                  Debemos decir que difícilmente encontraremos los ratios, así que se suele optar por valores normalizados. El WAF normal suele ser entre 1 y 2, así que lo habitual es optar por el más desfavorable.</p>
+
+              </div>
+              <div class="card-body ">
+                <h6 class="card-title h1">¿Cómo podemos calcular el periodo de vida útil?</h6>
+                <p class="card-text">Podemos decir que ahora viene lo difícil y un poco la «magia». Algunos valores los podremos obtener y otros, serán más o menos estimados.</p>
+                <p class="card-text"> <span >Vida útil SSD [años] =</span> {Resistencia [ciclos P/E] * Capacidad [física en bytes] * Factor de sobreaprovisionamiento [porcentaje]} / {(Velocidad de escritura [bps] x Ciclo de trabajo [ciclos] x Porcentaje de escritura x WAF) / (36 x 24 x 3600)}</p>
+                <p class="card-text">Esta fórmula es complicada de aplicar y algunos parámetros, como el sobreaprovisionamiento no lo encontraremos. Normalmente, se utiliza una fórmula más simple y «universal» para todos los SSD. Dicha formula es la siguiente:</p>
+                <p class="card-text"> <span >Vida útil SSD [años] =</span> {Resistencia [ciclos P/E] * Capacidad [física en bytes]} / (Factor de amplificación de escritura (WAF) * cantidad de escritura de datos anual)</p>
+               </div>
+               <img src="https://hardzone.es/app/uploads-hardzone.es/2023/06/calcular-vida-util-ssd-real.jpg" class="card-img-top" alt="Imagen 3">
+               <div class="card-body">
+                <h5 class="card-title">Caso practico</h5>
+                <p class="card-text">Vamos a suponer que tenemos un SSD M.2 de Samsung de 1 TB de capacidad. Esta unidad se basa en memorias de tipo QLC y como lo usamos para jugar, estimamos que cada día escribimos unos 30 GB en la unidad. Todos los datos son los siguientes:</p>
+                <ul>
+                    <li><span>Vida útil del SSD</span></li>
+                    <li><span>Memoria QLC</span>: 1.000 P/E</li>
+                    <li><span>Capacidad:</span>1.000 GB</li>
+                    <li><span>WAF:</span>2 (marca de calidad que hace uso de buenos controladores, pero vamos a situarnos en el peor escenario posible)</li>
+                    <li><span>Escritura anual:</span>30 GB * 365 días</li>
+                </ul>
+                <p class="card-text"><span>Vida útil SSD</span>= (1.000 P/E * 1.000 GB) / (2 * [30 GB * 365 días])</p>
+                <p class="card-text"><span>Vida útil SSD = 45.6 años</span></p>
+                <p class="card-text">Debemos tener en cuenta que esto es una estimación y siempre lo será. Es muy difícil calcular exactamente en un ámbito doméstico la cantidad de Gigabyte que escribiremos al día. Habrá días que usemos menos el ordenador y otros más. Para gaming se suele usar una horquilla de entre 20-50 GB/día.</p>
+
+              </div>
+
+              <div class="card-body">
+                <h6 class="card-title h1">Diferencia entre vida útil y TBW</h6>
+                <p class="card-text">La diferencia está en la garantía. Como es imposible saber el uso real que dará el usuario al SSD, los fabricantes establecen los TBW, que es valor a partir del cual, ya no dan garantía.
+
+                </p>
+                <p class="card-text">El fabricante sabe el proceso de fabricación de las memorias y esto les permite realizar cálculos precisos. Así, establecen unos TBW que las memorias pueden superar sin mayores dificultades. Se establece de tal manera que es muy difícil que la unidad presente problemas antes de llegar a ese valor.</p>
               </div>
             </div>
           </div>
