@@ -19,5 +19,9 @@ contacto.asunto = e.target.asunto.value;
 contacto.mjs = e.target.mjs.value;
 
 console.log(contacto);
-
+e.target.nombre.value = "";
+e.target.apellido.value = "";
+e.target.email.value = "";
+e.target.asunto.value = "";
+e.target.mjs.value = "";
 }
