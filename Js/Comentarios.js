@@ -6,22 +6,43 @@ const addComForm = document.getElementById("comment-form");
 const comModal = document.getElementById("comD");
 const editComForm = document.getElementById("editComForm");
 const eliminarButton = document.getElementById("eliminarButton");
-//const modificarButton = document.getElementById("modificarButton");
 const cancelarButton = document.getElementById("cancelarButton");
-const cambiarcolor = document.getElementById("colorbutton");
-
+//const cambiarcolor = document.getElementById("colorbutton");
+const estadobutton = document.getElementById("estadobutton");
 //detecto los eventos
 addComForm.addEventListener("submit", agregarelemtosform);
 editComForm.addEventListener("submit",escuchareditbutclick);
 eliminarButton.addEventListener("click",escuchareliminarbutclick) ;
-//modificarButton.addEventListener("submit",escuchareditbutclick) ;
 cancelarButton.addEventListener("click",() => comModal.close()) ;
-cambiarcolor.addEventListener("click", escucharCambiarColor);
-
+//cambiarcolor.addEventListener("click", escucharCambiarColor);
+estadobutton.addEventListener("click",cambiodeestado);
 
 
 //funciones
-function escucharCambiarColor()
+function cambiodeestado()
+{
+  const comId = Number(editComForm.querySelector("#comId").textContent)
+  console.log(comId);
+  const com = comentarios.find(comen => comen.id === comId);
+  if(com.estado === true)
+  {
+    com.estado = false;
+  }
+  else
+  {
+    com.estado = true;
+  }
+
+  comModal.close();
+  renderDiv();
+
+
+  
+
+}
+
+
+/*function escucharCambiarColor()
 {
   comentarios.forEach((comen) =>{
   const colorBox = document.getElementById("color"+comen.id);
@@ -36,11 +57,11 @@ function escucharCambiarColor()
   const yellow = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
   const ramdonColor = "rgb("+red + ","+ yellow+","+blue +")";
-  colorBox.style.backgroundColor = ramdonColor; */
+  colorBox.style.backgroundColor = ramdonColor; 
   
   comModal.close();
 }
-
+*/
 
 function escuchareditbutclick(e)
 {
@@ -80,6 +101,7 @@ function agregarelemtosform(e)
     const newcom = {
       id: generateId(comentarios),
       texto: comtexarea,
+      estado: false,
     };
     comentarios.push(newcom);
     //console.log(newcom);
@@ -97,11 +119,10 @@ function renderDiv(){
 
     const com = document.createElement("div");
     com.classList.add("comment"); 
-    com.id= "color"+comen.id;
     com.setAttribute("data-com-id",comen.id);
     com.textContent = comen.texto;
     com.addEventListener("click",escuchardivclick);
-    
+
     div.appendChild(com);
     
     
@@ -112,6 +133,18 @@ function escuchardivclick(e)
   const comId = e.currentTarget.getAttribute("data-com-id");
   const com = comentarios.find(comen => comen.id === Number(comId));
 
+  const est = document.getElementById("estado");
+  if(com.estado)
+  {
+    est.textContent = "Aprobado";
+    est.classList.add("blue");
+    est.classList.remove("red");
+  }
+  else{
+    est.textContent = "Pendiente";
+    est.classList.add("red");
+    est.classList.remove("blue");
+  }
 
   const comIdInput = editComForm.querySelector("#comId");
 
@@ -152,25 +185,6 @@ function generateId(comentarios) {
 
 
 
-
-
-
-
-function handleTodoRowClick(e) {
-  const comId = e.currentTarget.getAttribute("data-todo-id");
-  const com = comentarios.find(todo => comId.id === Number(comId));
-
-  const todoIdInput = editTodoForm.querySelector("#todoId");
-  const todoDescriptionInput = editTodoForm.querySelector(
-    "#todoDescriptionModal"
-  );
- 
-
-
-  todoIdInput.textContent = com.id;
-  todoDescriptionInput.value = com.description;
-  comD.showModal();
-}
 
 
 

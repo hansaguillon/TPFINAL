@@ -68,3 +68,23 @@ header {
 span{
   font-weight: bold
 }
+dialog[open] {
+  display: flex;
+  align-items: center;
+
+  background-color: #ede8e8;
+  border: 1px solid #161111;
+  padding: 20px;
+}
+fieldset
+{
+  padding-top: 20px;
+}
+.red
+{
+  color: red;
+}
+.blue
+{
+  color: #110a33;
+}
