@@ -181,6 +181,3 @@ function handleTodoRowClick(e) {
 
 
 
-
-
-

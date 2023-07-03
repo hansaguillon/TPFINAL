@@ -50,6 +50,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./Form.html">Formulario</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Galeria.html">Galeria</a>
+                </li>
               </ul>
   
            
@@ -84,14 +87,32 @@
           </div>
           <div class=" comment-box mt-3">
             <h3>Deja un comentario</h3>
-            <form id="comment-form">
-              <textarea id="comment-input" placeholder="Escribe tu comentario aquí"></textarea>
+            <form id="comment-form" action="">
+              <textarea id="comment-input" placeholder="Escribe tu comentario aquí" required></textarea>
               <button type="submit">Enviar comentario</button>
             </form>
-            <div id="comment-section">
+            <div  id="comment-section">
               <!-- Aquí se mostrarán los comentarios -->
             </div>
           </div>
+
+
+          <dialog id="comD">
+            <form id="editComForm" action="">
+              <p>ID:<span id="comId"></span></p>
+              <label for="conTextoModal">Description:
+        
+                <input type="text" id="conTextoModal">
+              </label>
+
+              <fieldset>
+                <button type="button" id="eliminarButton">Eliminar</button>
+                <button type="submit" id="modificarButton">Modificar</button>
+                <button type="button" id="cancelarButton">Cancelar</button>
+                <button type="button" id="colorbutton">Cambiar color</button>
+              </fieldset>
+            </form>
+          </dialog>
 
           <footer class="mt-3">
             <div class="container">
